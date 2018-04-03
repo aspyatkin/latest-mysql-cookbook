@@ -1,0 +1,16 @@
+name 'latest-mysql'
+maintainer 'Alexander Pyatkin'
+maintainer_email 'aspyatkin@gmail.com'
+license 'MIT'
+description 'Installs and configures MySQL'
+version '1.0.0'
+
+recipe 'latest-mysql::default', 'Installs and configures MySQL server and client'
+recipe 'latest-mysql::server', 'Installs and configures MySQL server'
+recipe 'latest-mysql::client', 'Installs and configures MySQL client'
+depends 'mysql', '~> 8.5.1'
+depends 'database', '~> 6.1.1'
+depends 'mysql2_chef_gem', '~> 2.1.0'
+depends 'secret', '~> 1.0.0'
+
+source_url 'https://github.com/aspyatkin/latest-mysql-cookbook.git'

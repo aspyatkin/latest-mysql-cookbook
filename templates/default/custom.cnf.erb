@@ -1,0 +1,4 @@
+[mysqld]
+<% unless @sql_mode.nil? %>
+sql_mode=<%= @sql_mode %>
+<% end %>
